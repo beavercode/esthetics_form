@@ -1,96 +1,146 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8"/>
-    <title>Cerrificate</title>
-    <style>
-
-    </style>
-
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Certificate</title>
 </head>
 <body>
 <!-- site header-->
+<h1>Подарочный сертификат</h1>
+<!-- site header-->
+
+
 <div class="cert">
-    <!-- begin cert-header  -->
-    <div class="cert-header">
-        <img class="cert-header-image" src="img/cert-header-img.jpg" alt="">
+    <div class="cert__header">
+        <img class="cert__header-img" src="img/cert-header-img.jpg" alt="">
 
-        <p class="cert-header-desc">Предлагаем приобрести сертификат онлайн. В продаже имеются сертификаты с номиналом
-            100, 200, 300 гривен.
-            Послезаполнения формы мы свяжемся с Вами в течении 24 часов.</p>
-    </div>
-    <!-- end cert-header  -->
-
-    <!-- begin cert-content  -->
-    <div class="cert-content">
-        <!-- begin cert-content-form  -->
-        <form class="cert-content-form" action="process.php" method="post">
-            <label>Ф.И.О
-                <input id="fio" name="fio" type="text" required autofocus>
-            </label>
-            <label>ЭЛЕКТРОННАЯ ПОЧТА
-                <input id="email" name="email" type="email" required>
-            </label>
-            <label>ТЕЛЕФОН
-                <input id="phone" name="phone" type="tel" required>
-            </label>
-            <label>АДРЕС ДОСТАВКИ
-                <input id="address" name="address" type="text" required>
-            </label>
-            <label>ВРЕМЯ ДОСТАВКИ
-                <input id="date_time" name="date_time" type="text" required>
-            </label>
-            <label>НОМИНАЛ И КОЛИЧЕСТВО
-                <select name="n100" id="n100">
-                    <option >1</option>
-                    <option >2</option>
-                    <option >3</option>
-                    <option >4</option>
-                    <option >5</option>
-                </select>
-                <select name="n200" id="n200">
-                    <option >1</option>
-                    <option >2</option>
-                    <option >3</option>
-                    <option >4</option>
-                    <option >5</option>
-                </select>
-                <select name="n300" id="n300">
-                    <option >1</option>
-                    <option >2</option>
-                    <option >3</option>
-                    <option >4</option>
-                    <option >5</option>
-                </select>
-            </label>
-
-            <input id="order" name="order" type="submit" value="Заказать">
-        </form>
-        <!-- end cert-content-form  -->
-
-        <!-- start cert-content-desc  -->
-        <div class="cert-content-desc">
-            <p class="cert-content-desc-header">о сертификате</p>
-
-            <p class="cert-content-desc-header">Правила оплаты услуг</p>
-            Подарочные карты «МОНЕ» можно приобрести и использовать в любом салоне красоты
-            «МОНЕ».<br>
-
-            Подарочная карта может свободно передаваться и является предъявительской. Сумма внесенных Приобретателем
-            карты денежных средств соответсвует номиналу выбраной им карты и является авансом, который засчитывается
-            в качестве оплаты приоьретаемых услуг при посещении салонов красоты «МОНЕ» Держателем карты.<br>
-
-            Если держатель карты не предъявил карту в любом из салонов сети до момента истечения срока действия
-            карты, то аванс остается в распоряжении продавца и возврату не подлежит.
+        <div class="cert__header-desc">Пред&shy;ла&shy;га&shy;ем при&shy;о&shy;брес&shy;ти сер&shy;ти&shy;фи&shy;кат он&shy;лайн.
+            В про&shy;да&shy;же име&shy;ют&shy;ся сер&shy;ти&shy;фи&shy;ка&shy;ты с но&shy;ми&shy;на&shy;лом
+            100, 200, 300 гри&shy;вен.
+            Пос&shy;ле&shy;за&shy;пол&shy;не&shy;ния фор&shy;мы мы свя&shy;жем&shy;ся с Ва&shy;ми в те&shy;че&shy;нии 24
+            ча&shy;сов.
         </div>
-        <!-- end cert-content-desc  -->
     </div>
-    <!-- end cert-content  -->
+
+    <div class="cert__content">
+        <form class="cert__form" action="process.php" method="post">
+            <table class="cert__table">
+                <tr>
+                    <td width="10">
+                        <label class="cert__form-label cert__form-label_upper" for="fio">ф.и.о</label>
+                    </td>
+                    <td>
+                        <input class="cert__form-input" id="fio" name="fio" type="text" required autofocus>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="220">
+                        <label class="cert__form-label cert__form-label_upper" for="email">электронная почта</label>
+                    </td>
+                    <td>
+                        <input class="cert__form-input" id="email" name="email" type="email" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label class="cert__form-label cert__form-label_upper" for="tel">телефон</label>
+                    </td>
+                    <td>
+                        <input class="cert__form-input" id="tel" name="tel" type="tel" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label class="cert__form-label cert__form-label_upper" for="address">адрес доставки</label>
+                    </td>
+                    <td>
+                        <input class="cert__form-input" id="address" name="address" type="text" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label class="cert__form-label cert__form-label_upper" for="date_time">дата доставки</label>
+                    </td>
+                    <td>
+                        <input class="cert__form-input" id="date_time" name="date_time" type="text" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label class="cert__form-label cert__form-label_upper" for="n100">номинал и количество</label>
+                    </td>
+                    <td>
+                        <div class="b-select">
+                            <label class="cert__form-select-label" for="n100">100 гр.</label>
+                            <select class="cert__form-select" name="n100" id="n100">
+                                <option></option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+
+                            <label class="cert__form-select-label" for="n200">200 гр.</label>
+                            <select class="cert__form-select" name="n200" id="n200">
+                                <option></option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+
+                            <label class="cert__form-select-label" for="n300">300 гр.</label>
+                            <select class="cert__form-select" name="n300" id="n300">
+                                <option></option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input class="cert__form-btn" id="order" name="order" type="submit" value="Заказать">
+                    </td>
+                </tr>
+            </table>
+        </form>
+
+        <div class="cert__sidebar">
+            <p class="cert__sidebar-header">о сертификате</p>
+            <div class="cert__sidebar-desc">По&shy;да&shy;роч&shy;ные кар&shy;ты «МО&shy;НЕ» мож&shy;но при&shy;о&shy;брес&shy;ти и ис&shy;поль&shy;зо&shy;вать в лю&shy;бом са&shy;ло&shy;не кра&shy;со&shy;ты
+                «МО&shy;НЕ».<br>
+
+                По&shy;да&shy;роч&shy;ная кар&shy;та мо&shy;жет сво&shy;бод&shy;но пе&shy;ре&shy;да&shy;вать&shy;ся и яв&shy;ля&shy;ет&shy;ся предъ&shy;яви&shy;тель&shy;ской. Сум&shy;ма вне&shy;сен&shy;ных При&shy;о&shy;бре&shy;та&shy;те&shy;лем
+                кар&shy;ты де&shy;неж&shy;ных средств со&shy;от&shy;вет&shy;с&shy;ву&shy;ет но&shy;ми&shy;на&shy;лу вы&shy;бра&shy;ной им кар&shy;ты и яв&shy;ля&shy;ет&shy;ся аван&shy;сом, ко&shy;то&shy;рый за&shy;счи&shy;ты&shy;ва&shy;ет&shy;ся
+                в ка&shy;чест&shy;ве опла&shy;ты при&shy;оь&shy;ре&shy;та&shy;е&shy;мых услуг при по&shy;се&shy;ще&shy;нии са&shy;ло&shy;нов кра&shy;со&shy;ты «МО&shy;НЕ» Дер&shy;жа&shy;те&shy;лем кар&shy;ты.<br>
+
+                Если дер&shy;жа&shy;тель кар&shy;ты не предъ&shy;явил кар&shy;ту в лю&shy;бом из са&shy;ло&shy;нов се&shy;ти до мо&shy;мен&shy;та ис&shy;те&shy;че&shy;ния сро&shy;ка дейст&shy;вия
+                кар&shy;ты, то аванс оста&shy;ет&shy;ся в рас&shy;по&shy;ря&shy;же&shy;нии про&shy;дав&shy;ца и воз&shy;вра&shy;ту не под&shy;ле&shy;жит.
+            </div>
+
+            <!--<p class="cert__sidebar-header">Правила оплаты услуг</p>
+            <div class="cert__sidebar-desc">
+                По&shy;да&shy;роч&shy;ные кар&shy;ты «МО&shy;НЕ» мож&shy;но при&shy;о&shy;брес&shy;ти и ис&shy;поль&shy;зо&shy;вать в лю&shy;бом са&shy;ло&shy;не кра&shy;со&shy;ты
+                «МО&shy;НЕ».<br>
+
+                По&shy;да&shy;роч&shy;ная кар&shy;та мо&shy;жет сво&shy;бод&shy;но пе&shy;ре&shy;да&shy;вать&shy;ся и яв&shy;ля&shy;ет&shy;ся предъ&shy;яви&shy;тель&shy;ской. Сум&shy;ма вне&shy;сен&shy;ных При&shy;о&shy;бре&shy;та&shy;те&shy;лем
+                кар&shy;ты де&shy;неж&shy;ных средств со&shy;от&shy;вет&shy;с&shy;ву&shy;ет но&shy;ми&shy;на&shy;лу вы&shy;бра&shy;ной им кар&shy;ты и яв&shy;ля&shy;ет&shy;ся аван&shy;сом, ко&shy;то&shy;рый за&shy;счи&shy;ты&shy;ва&shy;ет&shy;ся
+                в ка&shy;чест&shy;ве опла&shy;ты при&shy;оь&shy;ре&shy;та&shy;е&shy;мых услуг при по&shy;се&shy;ще&shy;нии са&shy;ло&shy;нов кра&shy;со&shy;ты «МО&shy;НЕ» Дер&shy;жа&shy;те&shy;лем кар&shy;ты.<br>
+
+                Если дер&shy;жа&shy;тель кар&shy;ты не предъ&shy;явил кар&shy;ту в лю&shy;бом из са&shy;ло&shy;нов се&shy;ти до мо&shy;мен&shy;та ис&shy;те&shy;че&shy;ния сро&shy;ка дейст&shy;вия
+                кар&shy;ты, то аванс оста&shy;ет&shy;ся в рас&shy;по&shy;ря&shy;же&shy;нии про&shy;дав&shy;ца и воз&shy;вра&shy;ту не под&shy;ле&shy;жит.
+            </div>-->
+        </div>
+    </div>
 
 </div>
 
-<!-- begin cert  -->
-<h1>Подарочный сертификат</h1>
-<!-- end cert  -->
 </body>
 </html>

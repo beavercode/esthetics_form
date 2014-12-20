@@ -1,0 +1,65 @@
+.cert {
+  position: relative;
+  width: 670px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica, Arial, sans-serif;
+  margin: 50px auto;
+}
+.cert .cert__header {
+  width: 150px;
+  height: 275px;
+}
+.cert .cert__header .cert__header-img {
+  position: absolute;
+  top: 0;
+  left: -75px;
+  width: 500px;
+  height: 270px;
+}
+.cert .cert__header .cert__header-desc {
+  width: 200px;
+  height: 225px;
+  margin-left: 425px;
+  padding: 25px;
+  font-size: 16px;
+}
+.cert .cert__content {
+  margin-top: 30px;
+}
+.cert .cert__content .cert__form {
+  width: 430px;
+  float: left;
+  margin-right: 30px;
+}
+.cert .cert__content .cert__form .cert__form-input {
+  font-size: 16px;
+  padding: 5px;
+  margin: 0;
+  width: 240px;
+  float: right;
+  border: 1px solid #000;
+  background: none;
+  vertical-align: middle;
+}
+.cert .cert__content .cert__form .cert__form-label {
+  color: #7d283f;
+}
+.cert .cert__content .cert__form .cert__form-label_upper {
+  text-transform: uppercase;
+}
+.cert #fio {
+  width: 350px;
+}
+.cert #fio .cert__table {
+  width: 100%;
+}
+.cert #fio .cert__sidebar {
+  width: 190px;
+  float: left;
+}
+.cert #fio .cert__sidebar .cert__sidebar-header {
+  width: 100%;
+  height: 100%;
+}
