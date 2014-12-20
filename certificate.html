@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>Cerrificate</title>
+    <style>
+
+    </style>
+
+</head>
+<body>
+<!-- site header-->
+<div class="cert">
+    <!-- begin cert-header  -->
+    <div class="cert-header">
+        <img class="cert-header-image" src="img/cert-header-img.jpg" alt="">
+
+        <p class="cert-header-desc">Предлагаем приобрести сертификат онлайн. В продаже имеются сертификаты с номиналом
+            100, 200, 300 гривен.
+            Послезаполнения формы мы свяжемся с Вами в течении 24 часов.</p>
+    </div>
+    <!-- end cert-header  -->
+
+    <!-- begin cert-content  -->
+    <div class="cert-content">
+        <!-- begin cert-content-form  -->
+        <form class="cert-content-form" action="process.php" method="post">
+            <label>Ф.И.О
+                <input id="fio" name="fio" type="text" required autofocus>
+            </label>
+            <label>ЭЛЕКТРОННАЯ ПОЧТА
+                <input id="email" name="email" type="email" required>
+            </label>
+            <label>ТЕЛЕФОН
+                <input id="phone" name="phone" type="tel" required>
+            </label>
+            <label>АДРЕС ДОСТАВКИ
+                <input id="address" name="address" type="text" required>
+            </label>
+            <label>ВРЕМЯ ДОСТАВКИ
+                <input id="date_time" name="date_time" type="text" required>
+            </label>
+            <label>НОМИНАЛ И КОЛИЧЕСТВО
+                <select name="n100" id="n100">
+                    <option >1</option>
+                    <option >2</option>
+                    <option >3</option>
+                    <option >4</option>
+                    <option >5</option>
+                </select>
+                <select name="n200" id="n200">
+                    <option >1</option>
+                    <option >2</option>
+                    <option >3</option>
+                    <option >4</option>
+                    <option >5</option>
+                </select>
+                <select name="n300" id="n300">
+                    <option >1</option>
+                    <option >2</option>
+                    <option >3</option>
+                    <option >4</option>
+                    <option >5</option>
+                </select>
+            </label>
+
+            <input id="order" name="order" type="submit" value="Заказать">
+        </form>
+        <!-- end cert-content-form  -->
+
+        <!-- start cert-content-desc  -->
+        <div class="cert-content-desc">
+            <p class="cert-content-desc-header">о сертификате</p>
+
+            <p class="cert-content-desc-header">Правила оплаты услуг</p>
+            Подарочные карты «МОНЕ» можно приобрести и использовать в любом салоне красоты
+            «МОНЕ».<br>
+
+            Подарочная карта может свободно передаваться и является предъявительской. Сумма внесенных Приобретателем
+            карты денежных средств соответсвует номиналу выбраной им карты и является авансом, который засчитывается
+            в качестве оплаты приоьретаемых услуг при посещении салонов красоты «МОНЕ» Держателем карты.<br>
+
+            Если держатель карты не предъявил карту в любом из салонов сети до момента истечения срока действия
+            карты, то аванс остается в распоряжении продавца и возврату не подлежит.
+        </div>
+        <!-- end cert-content-desc  -->
+    </div>
+    <!-- end cert-content  -->
+
+</div>
+
+<!-- begin cert  -->
+<h1>Подарочный сертификат</h1>
+<!-- end cert  -->
+</body>
+</html>
