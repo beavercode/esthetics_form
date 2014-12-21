@@ -12,60 +12,147 @@ $cert_width: 670px
 
   margin: 50px auto
 
+
+
+
   .cert__header
     width: 150px
     height: 275px
 
-    .cert__header-img
-      position: absolute
-      top: 0
-      left: -75px
-      width: 500px
-      height: 270px
+  .cert__header-img
+    position: absolute
+    top: 0
+    left: -75px
+    width: 500px
+    height: 270px
 
-    .cert__header-desc
-      width: 200px
-      height: 225px
-      margin-left: 425px
-      padding: 25px
-      font-size: 16px
+  .cert__header-desc
+    width: 200px
+    height: 225px
+    margin-left: 425px
+    padding: 25px
+    font-size: 16px
 
   .cert__content
     margin-top: 30px
 
-    .cert__form
-      width: 430px
-      float: left
-      margin-right: 30px
+  //content form
+  .cert__form
+    width: 430px
+    float: left
+    margin-right: 30px
 
-      .cert__form-input
-        font-size: 16px
-        padding: 5px
-        margin: 0
-        width: 240px
-        float: right
+  .cert__form-label
+    float: left
+    margin: 10px 0 0
+    text-align: left
+    font-size: 16px
+    line-height: 20px
+    color: #7d283f
 
-        border: 1px solid #000
-        background: none
-        vertical-align: middle /* This is optional but it makes legacy IEs look better */
+  .cert__form-input
+    display: inline-block
+    width: 240px
+    height: 35px
+    height: 19px\9 /* IE6, IE7, IE8 */
+    margin: 0 0 0 12px
+    padding: 0 5px
+    font-size: 16px
+    border: 1px solid #000
+    background: none
+    padding: 7px 5px\9 /* IE6, IE7, IE8 */
+    vertical-align: middle /* This is optional but it makes legacy IEs look better */
 
-      .cert__form-label
-        color: #7d283f
+  .cert__form-btn
+    padding: 0
+    margin: 0
+    width: 150px
+    height: 40px
+    font-size: 16px
+    border: none
+    color: #FFF
+    background: #9e566a /* Old browsers */
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzllNTY2YSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM1ZjFjMmQiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjNWYxYzJkIiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==)
+    background: -moz-linear-gradient(top,  #9e566a 0%, #5f1c2d 100%, #5f1c2d 100%) /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#9e566a), color-stop(100%,#5f1c2d), color-stop(100%,#5f1c2d)) /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #9e566a 0%,#5f1c2d 100%,#5f1c2d 100%) /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #9e566a 0%,#5f1c2d 100%,#5f1c2d 100%) /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #9e566a 0%,#5f1c2d 100%,#5f1c2d 100%) /* IE10+ */
+    background: linear-gradient(to bottom,  #9e566a 0%,#5f1c2d 100%,#5f1c2d 100%) /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9e566a', endColorstr='#5f1c2d',GradientType=0 ) /* IE6-8 */
 
-      .cert__form-label_upper
-        text-transform: uppercase
-  #fio
-    width: 350px
+  .cert__form-label_upper
+    text-transform: uppercase
 
-    .cert__table
-      width: 100%
+  .cert__form-label_nominal
+    margin: 27px 0 0
 
-    .cert__sidebar
-      width: 190px
-      float: left
+  .cert__form-select
+    width: 65px
+    height: 25px
+    margin: 5px 0 25px
+    padding: 0
+    font-size: 16px
 
-      .cert__sidebar-header
-        width: 100%
-        height: 100%
+  .cert__form-select-item
 
-      .cert__sidebar-desc
+  .cert__form-select-label
+    display: block
+    margin: 15px 0 5px
+    padding: 0
+    color: #FFF
+
+  //content table layout
+  .cert__table
+    width: 100%
+    border-collapse: collapse
+    border-spacing: 0
+    border: none
+
+  .cert__table-unit
+    text-align: right
+    padding: 0 0 25px 0
+
+  //select table layout
+  .cert__table_select
+    float: right
+    width: 300px
+    background-color: #8c8c8c
+
+  .cert__table-unit_select
+    padding: 0
+    height: 32px
+    text-align: center
+
+  //content sidebar
+  .cert__sidebar
+    width: 190px
+    float: left
+
+  .cert__sidebar-header
+    margin: 20px 0 10px 0
+    padding: 0
+    font-size: 16px
+    color: #7d283f
+
+  .cert__sidebar-header:first-of-type
+    margin-top: 0
+
+  .cert__sidebar-header_underline
+    border-bottom: 1px solid #c6a7af
+
+  .cert__sidebar-desc
+    font-size: 14px
+
+//input widths below
+#fio
+  width: 350px
+#email
+  width: 215px
+#tel
+  width: 320px
+#address
+  width: 250px
+#date
+  width: 265px

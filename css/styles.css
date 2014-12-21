@@ -11,14 +11,14 @@
   width: 150px;
   height: 275px;
 }
-.cert .cert__header .cert__header-img {
+.cert .cert__header-img {
   position: absolute;
   top: 0;
   left: -75px;
   width: 500px;
   height: 270px;
 }
-.cert .cert__header .cert__header-desc {
+.cert .cert__header-desc {
   width: 200px;
   height: 225px;
   margin-left: 425px;
@@ -28,38 +28,126 @@
 .cert .cert__content {
   margin-top: 30px;
 }
-.cert .cert__content .cert__form {
+.cert .cert__form {
   width: 430px;
   float: left;
   margin-right: 30px;
 }
-.cert .cert__content .cert__form .cert__form-input {
+.cert .cert__form-label {
+  float: left;
+  margin: 10px 0 0;
+  text-align: left;
   font-size: 16px;
-  padding: 5px;
-  margin: 0;
-  width: 240px;
-  float: right;
-  border: 1px solid #000;
-  background: none;
-  vertical-align: middle;
-}
-.cert .cert__content .cert__form .cert__form-label {
+  line-height: 20px;
   color: #7d283f;
 }
-.cert .cert__content .cert__form .cert__form-label_upper {
+.cert .cert__form-input {
+  display: inline-block;
+  width: 240px;
+  height: 35px;
+  height: 19px\9 ;
+  margin: 0 0 0 12px;
+  padding: 0 5px;
+  font-size: 16px;
+  border: 1px solid #000;
+  background: none;
+  padding: 7px 5px\9 ;
+  vertical-align: middle;
+}
+.cert .cert__form-btn {
+  padding: 0;
+  margin: 0;
+  width: 150px;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+  color: #FFF;
+  background: #9e566a;
+  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzllNTY2YSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM1ZjFjMmQiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjNWYxYzJkIiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
+  background: -moz-linear-gradient(top, #9e566a 0%, #5f1c2d 100%, #5f1c2d 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #9e566a), color-stop(100%, #5f1c2d), color-stop(100%, #5f1c2d));
+  background: -webkit-linear-gradient(top, #9e566a 0%, #5f1c2d 100%, #5f1c2d 100%);
+  background: -o-linear-gradient(top, #9e566a 0%, #5f1c2d 100%, #5f1c2d 100%);
+  background: -ms-linear-gradient(top, #9e566a 0%, #5f1c2d 100%, #5f1c2d 100%);
+  background: linear-gradient(to bottom, #9e566a 0%, #5f1c2d 100%, #5f1c2d 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9e566a', endColorstr='#5f1c2d',GradientType=0 );
+}
+.cert .cert__form-label_upper {
   text-transform: uppercase;
 }
-.cert #fio {
-  width: 350px;
+.cert .cert__form-label_nominal {
+  margin: 27px 0 0;
 }
-.cert #fio .cert__table {
+.cert .cert__form-select {
+  width: 65px;
+  height: 25px;
+  margin: 5px 0 25px;
+  padding: 0;
+  font-size: 16px;
+}
+.cert .cert__form-select-label {
+  display: block;
+  margin: 15px 0 5px;
+  padding: 0;
+  color: #FFF;
+}
+.cert .cert__table {
   width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: none;
 }
-.cert #fio .cert__sidebar {
+.cert .cert__table-unit {
+  text-align: right;
+  padding: 0 0 25px 0;
+}
+.cert .cert__table_select {
+  float: right;
+  width: 300px;
+  background-color: #8c8c8c;
+}
+.cert .cert__table-unit_select {
+  padding: 0;
+  height: 32px;
+  text-align: center;
+}
+.cert .cert__sidebar {
   width: 190px;
   float: left;
 }
-.cert #fio .cert__sidebar .cert__sidebar-header {
-  width: 100%;
-  height: 100%;
+.cert .cert__sidebar-header {
+  margin: 20px 0 10px 0;
+  padding: 0;
+  font-size: 16px;
+  color: #7d283f;
+}
+.cert .cert__sidebar-header:first-of-type {
+  margin-top: 0;
+}
+.cert .cert__sidebar-header_underline {
+  border-bottom: 1px solid #c6a7af;
+}
+.cert .cert__sidebar-desc {
+  font-size: 14px;
+}
+
+#fio {
+  width: 350px;
+}
+
+#email {
+  width: 215px;
+}
+
+#tel {
+  width: 320px;
+}
+
+#address {
+  width: 250px;
+}
+
+#date {
+  width: 265px;
 }
