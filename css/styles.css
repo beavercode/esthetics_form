@@ -122,7 +122,7 @@
   font-size: 16px;
   color: #7d283f;
 }
-.cert .cert__sidebar-header:first-of-type {
+.cert .cert__sidebar-header_first {
   margin-top: 0;
 }
 .cert .cert__sidebar-header_underline {
@@ -149,5 +149,7 @@
 }
 
 #date {
-  width: 265px;
+  width: 240px;
+  background: url("../img/cert__form-input-date.png") no-repeat right;
+  padding-right: 27px;
 }
