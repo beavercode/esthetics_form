@@ -4,17 +4,65 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/cusel.css">
+    <link rel="stylesheet" href="css/large.css">
+
     <script src="js/jquery-1.8.2.min.js"></script>
+    <script src="js/jquery.tools.min.js"></script>
     <script src="js/jquery-migrate-1.1.1.min.js"></script>
     <script src="js/cusel.min.js"></script>
     <script>
         jQuery(document).ready(function() {
+            //select inits
             var params = {
                 changedEl: "#n100",
-                visRows: 5,
+                visRows: 6,
                 scrollArrows: true
             };
             cuSel(params);
+            var params = {
+                changedEl: "#n200",
+                visRows: 6,
+                scrollArrows: true
+            };
+            cuSel(params);
+            var params = {
+                changedEl: "#n300",
+                visRows: 6,
+                scrollArrows: true
+            };
+            cuSel(params);
+
+            //accordion
+            $("#cert_tabs").tabs(
+                    "#cert_tabs div.cert__sidebar-desc",
+                    {tabs: 'span', effect: 'fade', initialIndex: 1}
+            );
+
+            //date calendar
+            //l8n
+            $.tools.dateinput.localize("ru",  {
+                months:        'Январь,Февраль,Март,Апрель,Май,Июнь,Июль,Август,Сентябрь,Октябрь,Ноябрь,Декабрь',
+                shortMonths:   'Янв,Фев,Мар,Апр,Май,Июн,Июл,Авг,Сен,Окт,Ноя,Дек',
+                days:          'Воскресенье,Понедельник,Вторник,Среда,Четверг,Пятница,Суббота',
+                shortDays:     'Вск,Пнд,Втр,Срд,Чтв,Птн,Сбт'
+            });
+            $.tools.dateinput.conf.lang = "ru";
+            //config
+            $("#date").dateinput({
+                format: 'dddd dd, mmmm yyyy',   // the format displayed for the user
+                selectors: false,   // whether month/year dropdowns are shown
+                min: -90,   // min selectable day (100 days backwards)
+                max: 90,    // max selectable day (100 days onwards)
+                offset: [0, 0], // tweak the position of the calendar
+                /*speed: 'fast',  // calendar reveal speed*/
+                firstDay: 1, // which day starts a week. 0 = sunday, 1 = monday etc..
+                onShow: function() {
+                    var pos = $('#date').offset();
+                    $('#calroot').css('top', pos.top + 21).css('left', pos.left - 15);
+                }
+            });
+
+            //validation
         });
     </script>
     <!--[if gte IE 9]>
@@ -24,9 +72,11 @@
         }
     </style>
     <![endif]-->
+
     <title>Certificate</title>
 </head>
 <body>
+
 <!-- site header-->
 <h1>Подарочный сертификат</h1>
 <!-- site header-->
@@ -73,14 +123,13 @@
                 </tr>
                 <tr>
                     <td class="cert__table-unit">
-                        <label class="cert__form-label cert__form-label_upper" for="date">дата доставки</label>
                         <input class="cert__form-input" id="date" name="date_time" type="text" required>
+                        <label class="cert__form-label cert__form-label_upper" for="date">дата доставки</label>
                     </td>
                 </tr>
                 <tr>
                     <td class="cert__table-unit">
-                        <label class="cert__form-label cert__form-label_upper cert__form-label_nominal" for="date">номинал и<br>количество</label>
-                        <!-- start cert__table cert__table_select -->
+                        <label class="cert__form-label cert__form-label_upper cert__form-label_nominal">номинал и<br>количество</label>
                         <table class="cert__table cert__table_select">
                             <tr>
                                 <td class="cert__table-unit cert__table-unit_select">
@@ -95,38 +144,37 @@
                             </tr>
                             <tr>
                                 <td class="cert__table-unit cert__table-unit_select">
-                                    <select class="cert__form-select" name="n100" id="n100">
-                                        <!--<option class="cert__form-select-item"></option>-->
-                                        <option class="cert__form-select-item" value="1">1 шт.</option>
-                                        <option class="cert__form-select-item" value="2">2 шт.</option>
-                                        <option class="cert__form-select-item" value="3">3 шт.</option>
-                                        <option class="cert__form-select-item" value="4">4 шт.</option>
-                                        <option class="cert__form-select-item" value="5">5 шт.</option>
+                                    <select class="cert__form-select" name="n100" id='n100'>
+                                        <option></option>
+                                        <option value="1">1 шт.</option>
+                                        <option value="2">2 шт.</option>
+                                        <option value="3">3 шт.</option>
+                                        <option value="4">4 шт.</option>
+                                        <option value="5">5 шт.</option>
                                     </select>
                                 </td>
                                 <td class="cert__table-unit cert__table-unit_select">
                                     <select class="cert__form-select" name="n200" id="n200">
-                                        <option class="cert__form-select-item"></option>
-                                        <option class="cert__form-select-item" value="1">1 шт.</option>
-                                        <option class="cert__form-select-item" value="2">2 шт.</option>
-                                        <option class="cert__form-select-item" value="3">3 шт.</option>
-                                        <option class="cert__form-select-item" value="4">4 шт.</option>
-                                        <option class="cert__form-select-item" value="5">5 шт.</option>
+                                        <option></option>
+                                        <option value="1">1 шт.</option>
+                                        <option value="2">2 шт.</option>
+                                        <option value="3">3 шт.</option>
+                                        <option value="4">4 шт.</option>
+                                        <option value="5">5 шт.</option>
                                     </select>
                                 </td>
                                 <td class="cert__table-unit cert__table-unit_select">
                                     <select class="cert__form-select" name="n300" id="n300">
-                                        <option class="cert__form-select-item"></option>
-                                        <option class="cert__form-select-item" value="1">1 шт.</option>
-                                        <option class="cert__form-select-item" value="2">2 шт.</option>
-                                        <option class="cert__form-select-item" value="3">3 шт.</option>
-                                        <option class="cert__form-select-item" value="4">4 шт.</option>
-                                        <option class="cert__form-select-item" value="5">5 шт.</option>
+                                        <option></option>
+                                        <option value="1">1 шт.</option>
+                                        <option value="2">2 шт.</option>
+                                        <option value="3">3 шт.</option>
+                                        <option value="4">4 шт.</option>
+                                        <option value="5">5 шт.</option>
                                     </select>
                                 </td>
                             </tr>
                         </table>
-                        <!-- end cert__table cert__table_select -->
                     </td>
                 </tr>
                 <tr>
@@ -137,29 +185,29 @@
             </table>
         </form>
 
-        <div class="cert__sidebar">
+        <div id="cert_tabs" class="cert__sidebar">
             <p class="cert__sidebar-header cert__sidebar-header_first">
-                <span class="cert__sidebar-header_underline">О сертификате</span>
+                <span class="cert__sidebar-header_decorated">О сертификате</span>
             </p>
-            <!--            <div class="cert__sidebar-desc">По&shy;да&shy;роч&shy;ные кар&shy;ты «МО&shy;НЕ» мож&shy;но при&shy;о&shy;брес&shy;ти
-                            и ис&shy;поль&shy;зо&shy;вать в лю&shy;бом са&shy;ло&shy;не кра&shy;со&shy;ты
-                            «МО&shy;НЕ».<br>
+            <div class="cert__sidebar-desc">По&shy;да&shy;роч&shy;ные кар&shy;ты «МО&shy;НЕ» мож&shy;но при&shy;о&shy;брес&shy;ти
+                и ис&shy;поль&shy;зо&shy;вать в лю&shy;бом са&shy;ло&shy;не кра&shy;со&shy;ты
+                «МО&shy;НЕ».<br>
 
-                            По&shy;да&shy;роч&shy;ная кар&shy;та мо&shy;жет сво&shy;бод&shy;но пе&shy;ре&shy;да&shy;вать&shy;ся и яв&shy;ля&shy;ет&shy;ся
-                            предъ&shy;яви&shy;тель&shy;ской. Сум&shy;ма вне&shy;сен&shy;ных При&shy;о&shy;бре&shy;та&shy;те&shy;лем
-                            кар&shy;ты де&shy;неж&shy;ных средств со&shy;от&shy;вет&shy;с&shy;ву&shy;ет но&shy;ми&shy;на&shy;лу вы&shy;бра&shy;ной
-                            им кар&shy;ты и яв&shy;ля&shy;ет&shy;ся аван&shy;сом, ко&shy;то&shy;рый за&shy;счи&shy;ты&shy;ва&shy;ет&shy;ся
-                            в ка&shy;чест&shy;ве опла&shy;ты при&shy;оь&shy;ре&shy;та&shy;е&shy;мых услуг при по&shy;се&shy;ще&shy;нии
-                            са&shy;ло&shy;нов кра&shy;со&shy;ты «МО&shy;НЕ» Дер&shy;жа&shy;те&shy;лем кар&shy;ты.<br>
+                По&shy;да&shy;роч&shy;ная кар&shy;та мо&shy;жет сво&shy;бод&shy;но пе&shy;ре&shy;да&shy;вать&shy;ся и яв&shy;ля&shy;ет&shy;ся
+                предъ&shy;яви&shy;тель&shy;ской. Сум&shy;ма вне&shy;сен&shy;ных При&shy;о&shy;бре&shy;та&shy;те&shy;лем
+                кар&shy;ты де&shy;неж&shy;ных средств со&shy;от&shy;вет&shy;с&shy;ву&shy;ет но&shy;ми&shy;на&shy;лу вы&shy;бра&shy;ной
+                им кар&shy;ты и яв&shy;ля&shy;ет&shy;ся аван&shy;сом, ко&shy;то&shy;рый за&shy;счи&shy;ты&shy;ва&shy;ет&shy;ся
+                в ка&shy;чест&shy;ве опла&shy;ты при&shy;оь&shy;ре&shy;та&shy;е&shy;мых услуг при по&shy;се&shy;ще&shy;нии
+                са&shy;ло&shy;нов кра&shy;со&shy;ты «МО&shy;НЕ» Дер&shy;жа&shy;те&shy;лем кар&shy;ты.<br>
 
-                            Если дер&shy;жа&shy;тель кар&shy;ты не предъ&shy;явил кар&shy;ту в лю&shy;бом из са&shy;ло&shy;нов се&shy;ти
-                            до мо&shy;мен&shy;та ис&shy;те&shy;че&shy;ния сро&shy;ка дейст&shy;вия
-                            кар&shy;ты, то аванс оста&shy;ет&shy;ся в рас&shy;по&shy;ря&shy;же&shy;нии про&shy;дав&shy;ца и воз&shy;вра&shy;ту
-                            не под&shy;ле&shy;жит.
-                        </div>-->
+                Если дер&shy;жа&shy;тель кар&shy;ты не предъ&shy;явил кар&shy;ту в лю&shy;бом из са&shy;ло&shy;нов се&shy;ти
+                до мо&shy;мен&shy;та ис&shy;те&shy;че&shy;ния сро&shy;ка дейст&shy;вия
+                кар&shy;ты, то аванс оста&shy;ет&shy;ся в рас&shy;по&shy;ря&shy;же&shy;нии про&shy;дав&shy;ца и воз&shy;вра&shy;ту
+                не под&shy;ле&shy;жит.
+            </div>
 
             <p class="cert__sidebar-header">
-                <span class="cert__sidebar-header_underline">Правила оплаты услуг</span>
+                <span class="cert__sidebar-header_decorated">Правила оплаты услуг</span>
             </p>
 
             <div class="cert__sidebar-desc">По&shy;да&shy;роч&shy;ные кар&shy;ты «МО&shy;НЕ» мож&shy;но при&shy;о&shy;брес&shy;ти
@@ -180,8 +228,10 @@
             </div>
         </div>
     </div>
-
 </div>
 
+<div>
+
+</div>
 </body>
 </html>

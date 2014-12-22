@@ -9,11 +9,7 @@ $cert_width: 670px
   margin: 0
   padding: 0
   font-family: Helvetica, Arial, sans-serif
-
-  margin: 50px auto
-
-
-
+  margin: 20px auto 500px
 
   .cert__header
     width: 150px
@@ -62,6 +58,7 @@ $cert_width: 670px
     background: none
     padding: 7px 5px\9 /* IE6, IE7, IE8 */
     vertical-align: middle /* This is optional but it makes legacy IEs look better */
+    outline: none
 
   .cert__form-btn
     padding: 0
@@ -90,12 +87,10 @@ $cert_width: 670px
 
   .cert__form-select
     width: 65px
-    height: 25px
+    height: 26px
     margin: 5px 0 25px
     padding: 0
     font-size: 16px
-
-  .cert__form-select-item
 
   .cert__form-select-label
     display: block
@@ -124,6 +119,8 @@ $cert_width: 670px
     padding: 0
     height: 32px
     text-align: center
+    &:focus
+      outline: none
 
   //content sidebar
   .cert__sidebar
@@ -139,8 +136,9 @@ $cert_width: 670px
   .cert__sidebar-header_first
     margin-top: 0
 
-  .cert__sidebar-header_underline
+  .cert__sidebar-header_decorated
     border-bottom: 1px solid #c6a7af
+    cursor: pointer
 
   .cert__sidebar-desc
     font-size: 14px
@@ -156,5 +154,6 @@ $cert_width: 670px
   width: 250px
 #date
   width: 240px
+
   background: url('../img/cert__form-input-date.png') no-repeat right
   padding-right: 27px

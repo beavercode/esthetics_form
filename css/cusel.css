@@ -5,13 +5,13 @@
 .cuselFrameRight,
 .jScrollArrowUp,
 .jScrollArrowDown {
-    background: url('../img/select_bg.png') no-repeat;
+    background: url('../img/select_est.png') no-repeat;
 }
 
 .cusel {
     /* общий вид селекта включая стрелку справа */
     height: 26px;
-    background-position: left top;
+
     display: inline-block;
     position: relative;
     cursor: pointer;
@@ -25,20 +25,21 @@
     top: 0;
     right: 0;
     height: 100%;
-    width: 42px;
+    /*width: 42px;*/
+    width: 20px;
     background-position: right top;
 }
 
 .cuselText {
     /* контейнер для отображенного текста селект */
     height: 17px;
-    padding: 6px 0 0 7px; /* подбираем отступы и высоту для видимого текста в селекте */
+    padding: 5px 0 0 7px; /* подбираем отступы и высоту для видимого текста в селекте */
     cursor: pointer;
     overflow: hidden;
     position: relative;
     z-index: 1;
     /*font: 15px Arial, "Helvetica CY", "Nimbus Sans L", sans-serif; *//* шрифты */
-    font: 15px Helvetica, Arial, sans-serif;
+    font: 16px Helvetica, Arial, sans-serif;
     position: absolute;
     top: 0;
     left: 0;
@@ -51,6 +52,7 @@
     white-space: nowrap;
     padding: 2px 15px 2px 5px; /* паддинг справа - это отступ текста от ползунка */
     zoom: 1;
+    font: 16px Helvetica, Arial, sans-serif;
 }
 
 .cusel-scroll-pane > span:hover,
@@ -62,7 +64,7 @@
 
 .cusel-scroll-wrap .cuselActive {
     /* оформление активного оптиона в списке */
-    background: #CC0000;
+    background: #a4556b;
     color: #fff;
     cursor: default;
 }
@@ -74,7 +76,9 @@
 .cusel:hover .cuselFrameRight,
 .cusel:focus,
 .cusel:focus .cuselFrameRight {
-    background-image: url('../img/select_bg_focus.png');
+    /*background-image: url('../img/select_bg_focus.png');*/
+    background-image: url('../img/select_est.png');
+    outline: none;
 }
 
 /*
@@ -82,7 +86,8 @@
 */
 .cusel.classDisCusel,
 .cusel.classDisCusel .cuselFrameRight {
-    background-image: url('../img/select_bg.png');
+    /*background-image: url('../img/select_bg.png');*/
+    background-image: url('../img/select_est.png');
     filter: alpha(opacity=65);
     opacity: .65;
     cursor: default;
@@ -96,6 +101,7 @@
 #cuselBox {
     position: absolute;
     z-index: 9999;
+    width: 63px\9 /* IE6, IE7, IE8 */;
 }
 
 /*
