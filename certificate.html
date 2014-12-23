@@ -12,20 +12,20 @@
     <script src="js/cusel.min.js"></script>
     <script>
         jQuery(document).ready(function() {
-            //select inits
+            //select's init
             var params = {
                 changedEl: "#n100",
                 visRows: 6,
                 scrollArrows: true
             };
             cuSel(params);
-            var params = {
+            params = {
                 changedEl: "#n200",
                 visRows: 6,
                 scrollArrows: true
             };
             cuSel(params);
-            var params = {
+            params = {
                 changedEl: "#n300",
                 visRows: 6,
                 scrollArrows: true
@@ -38,29 +38,6 @@
                     {tabs: 'span', effect: 'fade', initialIndex: 1}
             );
 
-            //date calendar
-            //l8n
-            $.tools.dateinput.localize("ru",  {
-                months:        'Январь,Февраль,Март,Апрель,Май,Июнь,Июль,Август,Сентябрь,Октябрь,Ноябрь,Декабрь',
-                shortMonths:   'Янв,Фев,Мар,Апр,Май,Июн,Июл,Авг,Сен,Окт,Ноя,Дек',
-                days:          'Воскресенье,Понедельник,Вторник,Среда,Четверг,Пятница,Суббота',
-                shortDays:     'Вск,Пнд,Втр,Срд,Чтв,Птн,Сбт'
-            });
-            $.tools.dateinput.conf.lang = "ru";
-            //config
-            $("#date").dateinput({
-                format: 'dddd dd, mmmm yyyy',   // the format displayed for the user
-                selectors: false,   // whether month/year dropdowns are shown
-                min: -90,   // min selectable day (100 days backwards)
-                max: 90,    // max selectable day (100 days onwards)
-                offset: [0, 0], // tweak the position of the calendar
-                /*speed: 'fast',  // calendar reveal speed*/
-                firstDay: 1, // which day starts a week. 0 = sunday, 1 = monday etc..
-                onShow: function() {
-                    var pos = $('#date').offset();
-                    $('#calroot').css('top', pos.top + 21).css('left', pos.left - 15);
-                }
-            });
 
             //validation
         });
@@ -100,30 +77,30 @@
                 <tr>
                     <td class="cert__table-unit">
                         <label class="cert__form-label cert__form-label_upper" for="fio">ф.и.о</label>
-                        <input class="cert__form-input" id="fio" name="fio" type="text" required autofocus>
+                        <input class="cert__form-input" id="fio" name="fio" type="text" autofocus>
                     </td>
                 </tr>
                 <tr>
                     <td class="cert__table-unit">
                         <label class="cert__form-label cert__form-label_upper" for="email">электронная почта</label>
-                        <input class="cert__form-input" id="email" name="email" type="email" required>
+                        <input class="cert__form-input" id="email" name="email" type="email">
                     </td>
                 </tr>
                 <tr>
                     <td class="cert__table-unit">
                         <label class="cert__form-label cert__form-label_upper" for="tel">телефон</label>
-                        <input class="cert__form-input" id="tel" name="tel" type="tel" required>
+                        <input class="cert__form-input" id="tel" name="tel" type="tel">
                     <td class="cert__table-unit">
                 </tr>
                 <tr>
                     <td class="cert__table-unit">
                         <label class="cert__form-label cert__form-label_upper" for="address">адрес доставки</label>
-                        <input class="cert__form-input" id="address" name="address" type="text" required>
+                        <input class="cert__form-input" id="address" name="address" type="text">
                     </td>
                 </tr>
                 <tr>
                     <td class="cert__table-unit">
-                        <input class="cert__form-input" id="date" name="date_time" type="text" required>
+                        <input class="cert__form-input" id="date" name="date_time" type="text">
                         <label class="cert__form-label cert__form-label_upper" for="date">дата доставки</label>
                     </td>
                 </tr>
