@@ -26,15 +26,12 @@ jQuery(document).ready(function() {
     );
 
     //date calendar
-    //l8n
     $.tools.dateinput.localize("ru",  {
         months:        'Январь,Февраль,Март,Апрель,Май,Июнь,Июль,Август,Сентябрь,Октябрь,Ноябрь,Декабрь',
         shortMonths:   'Янв,Фев,Мар,Апр,Май,Июн,Июл,Авг,Сен,Окт,Ноя,Дек',
         days:          'Воскресенье,Понедельник,Вторник,Среда,Четверг,Пятница,Суббота',
         shortDays:     'Вск,Пнд,Втр,Срд,Чтв,Птн,Сбт'
     });
-
-    //config
     $("#date").dateinput({
         format: 'dddd dd, mmmm yyyy',   // the format displayed for the user
         lang: 'ru', // localisation language
@@ -48,4 +45,17 @@ jQuery(document).ready(function() {
             $('#calroot').css('top', pos.top + 21).css('left', pos.left - 13);
         }
     });
+
+    //validation
+    $.tools.validator.fn("[minlength]", function(input, value) {
+        var min = input.attr("minlength");
+        return value.length >= min ? true : {
+            ru: "Минимум " + min + " символ" + (min > 1 ? "ов" : "")
+        };
+    });
+    $.tools.validator.localize("ru", {
+        ':email'    : 'Неверный формат эмейл',
+        '[required]': 'Поле необходимо заполнить'
+    });
+    $("#cert__form").validator({lang: 'ru'});
 });

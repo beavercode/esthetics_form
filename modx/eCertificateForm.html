@@ -1,36 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/cert.css">
-    <link rel="stylesheet" href="css/cusel.css">
-    <link rel="stylesheet" href="css/calendar.css">
-
-    <script src="js/jquery-1.8.2.min.js"></script>
-    <script src="js/jquery-migrate-1.1.1.min.js"></script>
-    <script src="js/jquery.tools.min.js"></script>
-    <script src="js/cusel.min.js"></script>
-    <script src="js/cert.js"></script>
-    <!--[if gte IE 9]>
-    <style>
-        .gradient {
-            filter: none;
-        }
-    </style>
-    <![endif]-->
-    <title>Certificate</title>
-</head>
-<body>
-
-<!-- site header-->
-<h1>Подарочный сертификат</h1>
-<!-- site header-->
-
-
 <div class="cert">
     <div class="cert__header">
-        <img class="cert__header-img" src="img/cert-header-img.jpg" alt="">
-
+        <img class="cert__header-img" src="[(base_url)]assets/templates/certificate/img/cert-header-img.jpg" alt="">
         <div class="cert__header-desc">Пред&shy;ла&shy;га&shy;ем при&shy;о&shy;брес&shy;ти сер&shy;ти&shy;фи&shy;кат он&shy;лайн.
             В про&shy;да&shy;же име&shy;ют&shy;ся сер&shy;ти&shy;фи&shy;ка&shy;ты с но&shy;ми&shy;на&shy;лом
             100, 200, 300 гри&shy;вен.
@@ -38,7 +8,7 @@
             ча&shy;сов.
         </div>
     </div>
-
+    [+validationmessage+]
     <div class="cert__content">
         <form id="cert__form" class="cert__form" action="[~[*id*]~]" method="post">
             <input name="formid" type="hidden" value="certificateForm">
@@ -52,7 +22,7 @@
                 <tr>
                     <td class="cert__table-unit">
                         <label class="cert__form-label cert__form-label_upper" for="email">электронная почта</label>
-                        <input class="cert__form-input" id="email" name="email" type="text" required="required" pattern="" eform="Электронная почта:email:1">
+                        <input class="cert__form-input" id="email" name="email" type="text" required="required" minlength="6" eform="Электронная почта:email:1">
                     </td>
                 </tr>
                 <tr>
@@ -175,5 +145,3 @@
         </div>
     </div>
 </div>
-</body>
-</html>

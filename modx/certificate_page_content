@@ -1,0 +1,11 @@
+[!eForm?
+&formid=`certificateForm`
+&tpl=`eCertificateForm`
+&report=`eCertificateReport`
+&thankyou=`eCertificateTnx`
+
+&to=`erobober@gmail.com`
+&from=`((email))`
+&fromname=`((name))`
+&subject=`Esthetics.com.ua - Подарочный сертификат`
+!]

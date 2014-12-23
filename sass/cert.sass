@@ -9,8 +9,8 @@ $cert_width: 670px
   margin: 0
   padding: 0
   font-family: Helvetica, Arial, sans-serif
-  margin: 20px auto 500px
 
+  margin: 20px auto 500px
 
   .cert__header
     width: 150px
@@ -79,6 +79,8 @@ $cert_width: 670px
     background: -ms-linear-gradient(top,  #9e566a 0%,#5f1c2d 100%,#5f1c2d 100%) /* IE10+ */
     background: linear-gradient(to bottom,  #9e566a 0%,#5f1c2d 100%,#5f1c2d 100%) /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9e566a', endColorstr='#5f1c2d',GradientType=0 ) /* IE6-8 */
+    cursor: pointer
+    outline: none
 
   .cert__form-label_upper
     text-transform: uppercase
@@ -157,3 +159,17 @@ $cert_width: 670px
   width: 240px
   padding-right: 27px
   background: url('../img/cert__form-input-date.png') no-repeat right
+
+.error
+  display: none
+  height: 15px
+  margin: 0 0 0 2px
+  padding: 10px 10px
+  background-color: #924b5f
+  font: 12px Helvetica, Arial, sans-serif
+  color: #FFF
+  //border: 1px solid #E1E16D
+  border-radius: 0 4px 4px 0
+  box-shadow: 1px 1px 6px #DDD
+  & p
+    margin: 0
