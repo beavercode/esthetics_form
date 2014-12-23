@@ -24,6 +24,7 @@
   margin-left: 425px;
   padding: 25px;
   font-size: 16px;
+  line-height: 20px;
 }
 .cert .cert__content {
   margin-top: 30px;
@@ -137,9 +138,10 @@
 }
 .cert .cert__sidebar-desc {
   font-size: 14px;
+  line-height: 18px;
 }
 
-#fio {
+#fio1 {
   width: 350px;
 }
 
