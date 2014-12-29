@@ -36,7 +36,7 @@ jQuery(document).ready(function() {
         format: 'dddd dd, mmmm yyyy',   // the format displayed for the user
         lang: 'ru', // localisation language
         firstDay: 1, // which day starts a week. 0 = sunday, 1 = monday etc.
-        min: -1,   // min selectable day (90 days backwards)
+        min: -1,   // min selectable day (1 day backwards)
         max: 90,    // max selectable day (90 days onwards)
         offset: [0, 0], // tweak the position of the calendar
         selectors: false,   // whether month/year dropdowns are shown
