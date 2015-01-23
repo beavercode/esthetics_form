@@ -40,7 +40,7 @@
     </div>
 
     <div class="cert__content">
-        <form id="cert__form" class="cert__form" action="[~[*id*]~]" method="post">
+        <form id="cert__form" class="cert__form" action="process.php" method="post">
             <input name="formid" type="hidden" value="certificateForm">
             <table class="cert__table">
                 <tr>
@@ -79,38 +79,23 @@
                         <table class="cert__table cert__table_select">
                             <tr>
                                 <td class="cert__table-unit cert__table-unit_select">
-                                    <label class="cert__form-select-label" for="n100">100 гр.</label>
+                                    <label class="cert__form-select-label" for="nominal">Номинал</label>
                                 </td>
                                 <td class="cert__table-unit cert__table-unit_select">
-                                    <label class="cert__form-select-label" for="n200">200 гр.</label>
-                                </td>
-                                <td class="cert__table-unit cert__table-unit_select">
-                                    <label class="cert__form-select-label" for="n300">300 гр.</label>
+                                    <label class="cert__form-select-label" for="quantity">Количество</label>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="cert__table-unit cert__table-unit_select">
-                                    <select class="cert__form-select" name="n100" id='n100'>
+                                    <select class="cert__form-select" name="nominal" id='nominal'>
                                         <option></option>
-                                        <option value="1">1 шт.</option>
-                                        <option value="2">2 шт.</option>
-                                        <option value="3">3 шт.</option>
-                                        <option value="4">4 шт.</option>
-                                        <option value="5">5 шт.</option>
+                                        <option value="100">100 гр.</option>
+                                        <option value="200">200 гр.</option>
+                                        <option value="300">300 гр.</option>
                                     </select>
                                 </td>
                                 <td class="cert__table-unit cert__table-unit_select">
-                                    <select class="cert__form-select" name="n200" id="n200">
-                                        <option></option>
-                                        <option value="1">1 шт.</option>
-                                        <option value="2">2 шт.</option>
-                                        <option value="3">3 шт.</option>
-                                        <option value="4">4 шт.</option>
-                                        <option value="5">5 шт.</option>
-                                    </select>
-                                </td>
-                                <td class="cert__table-unit cert__table-unit_select">
-                                    <select class="cert__form-select" name="n300" id="n300">
+                                    <select class="cert__form-select" name="quantity" id="quantity">
                                         <option></option>
                                         <option value="1">1 шт.</option>
                                         <option value="2">2 шт.</option>
@@ -175,5 +160,7 @@
         </div>
     </div>
 </div>
+
+<script src="http://localhost:35729/livereload.js"></script>
 </body>
 </html>
